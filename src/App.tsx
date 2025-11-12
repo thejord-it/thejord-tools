@@ -8,6 +8,10 @@ import MarkdownConverter from './pages/MarkdownConverter'
 import ColorConverter from './pages/ColorConverter'
 import LoremIpsumGenerator from './pages/LoremIpsumGenerator'
 import DiffChecker from './pages/DiffChecker'
+import About from './pages/About'
+import Contact from './pages/Contact'
+import Blog from './pages/Blog'
+import BlogPost from './pages/BlogPost'
 
 function Home() {
   return (
@@ -25,8 +29,9 @@ function Home() {
             </Link>
             <div className="flex gap-6">
               <Link to="/" className="text-text-secondary hover:text-primary-light transition-colors">Tools</Link>
-              <a href="#" className="text-text-secondary hover:text-primary-light transition-colors">Blog</a>
-              <a href="#" className="text-text-secondary hover:text-primary-light transition-colors">About</a>
+              <Link to="/blog" className="text-text-secondary hover:text-primary-light transition-colors">Blog</Link>
+              <Link to="/about" className="text-text-secondary hover:text-primary-light transition-colors">About</Link>
+              <Link to="/contact" className="text-text-secondary hover:text-primary-light transition-colors">Contact</Link>
             </div>
           </div>
         </nav>
@@ -118,6 +123,10 @@ function App() {
         <Route path="/color" element={<ColorConverter />} />
         <Route path="/lorem" element={<LoremIpsumGenerator />} />
         <Route path="/diff" element={<DiffChecker />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/:slug" element={<BlogPost />} />
       </Routes>
     </BrowserRouter>
   )
