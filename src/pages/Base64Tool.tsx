@@ -1,14 +1,25 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
+import Layout from '../components/Layout';
+import Toast from '../components/Toast';
+import { detectFileType, getFileIcon, DetectedFileType } from '../lib/file-detection';
+
+const MAX_FILE_SIZE = 5 * 1024 * 1024; // 5MB
 
 export default function Base64Tool() {
   const [input, setInput] = useState('');
   const [output, setOutput] = useState('');
   const [mode, setMode] = useState<'encode' | 'decode'>('encode');
   const [error, setError] = useState('');
+  const [toast, setToast] = useState<{ message: string; type: 'success' | 'error' } | null>(null);
+  const [detectedType, setDetectedType] = useState<DetectedFileType | null>(null);
+  const [decodedBase64, setDecodedBase64] = useState<string>(''); // Store clean Base64 for binary downloads
+  const fileInputRef = useRef<HTMLInputElement>(null);
 
   const handleEncode = () => {
     try {
       setError('');
+      setDetectedType(null); // Clear file type detection for encoding
+      setDecodedBase64(''); // Clear decoded Base64
       const encoded = btoa(unescape(encodeURIComponent(input)));
       setOutput(encoded);
     } catch (err) {
@@ -20,11 +31,49 @@ export default function Base64Tool() {
   const handleDecode = () => {
     try {
       setError('');
-      const decoded = decodeURIComponent(escape(atob(input)));
-      setOutput(decoded);
+
+      // Remove data URL prefix if present (e.g., "data:image/png;base64,")
+      let base64Data = input.trim();
+      if (base64Data.includes(',')) {
+        base64Data = base64Data.split(',')[1];
+      }
+
+      // Store clean Base64 for downloads
+      setDecodedBase64(base64Data);
+
+      // Detect file type from the clean Base64
+      const fileType = detectFileType(base64Data);
+      setDetectedType(fileType);
+
+      // Check if it's a binary file
+      const isBinary = fileType && (
+        fileType.mime.startsWith('image/') ||
+        fileType.mime.startsWith('video/') ||
+        fileType.mime.startsWith('audio/') ||
+        fileType.mime.includes('pdf') ||
+        fileType.mime.includes('zip') ||
+        fileType.mime.includes('executable') ||
+        fileType.mime.includes('octet-stream')
+      );
+
+      if (isBinary) {
+        // For binary files, show a message instead of garbled text
+        setOutput(`[Binary ${fileType?.description || 'file'} detected - ${Math.round(base64Data.length * 0.75)} bytes]\n\nClick "Download" button to save the file.`);
+      } else {
+        // For text files, decode normally
+        const decoded = decodeURIComponent(escape(atob(base64Data)));
+        setOutput(decoded);
+      }
+
+      if (fileType) {
+        console.log('Detected file type:', fileType);
+      }
     } catch (err) {
+      console.error('Decode error:', err);
       setError('Error decoding: Invalid Base64 string');
       setOutput('');
+      setDetectedType(null);
+      setDecodedBase64('');
     }
   };
 
@@ -39,9 +88,9 @@ export default function Base64Tool() {
   const handleCopy = async () => {
     try {
       await navigator.clipboard.writeText(output);
-      alert('Copied to clipboard!');
+      setToast({ message: 'Copied to clipboard!', type: 'success' });
     } catch (error) {
-      alert('Failed to copy');
+      setToast({ message: 'Failed to copy', type: 'error' });
     }
   };
 
@@ -49,6 +98,11 @@ export default function Base64Tool() {
     setInput('');
     setOutput('');
     setError('');
+    setDetectedType(null);
+    setDecodedBase64('');
+    if (fileInputRef.current) {
+      fileInputRef.current.value = '';
+    }
   };
 
   const handleSwap = () => {
@@ -58,28 +112,122 @@ export default function Base64Tool() {
     setMode(mode === 'encode' ? 'decode' : 'encode');
   };
 
-  return (
-    <div className="min-h-screen bg-bg-darkest">
-      <header className="bg-bg-dark border-b border-border sticky top-0 z-50">
-        <nav className="max-w-7xl mx-auto px-4 py-4">
-          <div className="flex justify-between items-center">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center text-xl font-bold shadow-lg shadow-primary/40">
-                ⚡
-              </div>
-              <span className="text-2xl font-bold bg-gradient-to-r from-primary-light to-secondary-light bg-clip-text text-transparent">
-                THE JORD
-              </span>
-            </div>
-            <div className="flex gap-6">
-              <a href="/" className="text-text-secondary hover:text-primary-light transition-colors">
-                ← Back to Tools
-              </a>
-            </div>
-          </div>
-        </nav>
-      </header>
+  const handleFileUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files?.[0];
+    if (!file) return;
 
+    if (file.size > MAX_FILE_SIZE) {
+      setError(`File too large. Maximum size is ${MAX_FILE_SIZE / (1024 * 1024)}MB`);
+      setToast({ message: `File too large! Max ${MAX_FILE_SIZE / (1024 * 1024)}MB`, type: 'error' });
+      if (fileInputRef.current) {
+        fileInputRef.current.value = '';
+      }
+      return;
+    }
+
+    const reader = new FileReader();
+
+    if (mode === 'encode') {
+      // Check if file is binary (image, pdf, etc.) or text
+      const isTextFile = file.type.startsWith('text/') ||
+                         file.type.includes('json') ||
+                         file.type.includes('xml') ||
+                         file.type.includes('javascript');
+
+      if (isTextFile) {
+        // Read text files as text
+        reader.onload = (e) => {
+          const result = e.target?.result;
+          if (typeof result === 'string') {
+            setInput(result);
+            setError('');
+            setToast({ message: 'File loaded successfully!', type: 'success' });
+          }
+        };
+        reader.readAsText(file);
+      } else {
+        // Read binary files (images, pdf, etc.) as ArrayBuffer
+        reader.onload = (e) => {
+          const arrayBuffer = e.target?.result;
+          if (arrayBuffer instanceof ArrayBuffer) {
+            // Convert ArrayBuffer to Base64
+            const bytes = new Uint8Array(arrayBuffer);
+            let binary = '';
+            for (let i = 0; i < bytes.length; i++) {
+              binary += String.fromCharCode(bytes[i]);
+            }
+            const base64 = btoa(binary);
+            setInput(base64);
+            setError('');
+            setToast({ message: `Binary file loaded (${file.type || 'unknown type'})`, type: 'success' });
+          }
+        };
+        reader.readAsArrayBuffer(file);
+      }
+    } else {
+      // For decode mode, read as base64
+      reader.onload = (e) => {
+        const result = e.target?.result;
+        if (typeof result === 'string') {
+          // Remove data URL prefix if present
+          const base64 = result.includes(',') ? result.split(',')[1] : result;
+          setInput(base64);
+          setError('');
+          setToast({ message: 'File loaded successfully!', type: 'success' });
+        }
+      };
+      reader.readAsDataURL(file);
+    }
+
+    reader.onerror = () => {
+      setError('Failed to read file');
+      setToast({ message: 'Failed to read file', type: 'error' });
+    };
+  };
+
+  const handleDownload = () => {
+    if (!output) return;
+
+    let filename: string;
+    let mimeType = 'text/plain';
+    let blob: Blob;
+
+    if (mode === 'decode' && detectedType && decodedBase64) {
+      // Use detected file type for decoded files
+      filename = `decoded.${detectedType.extension}`;
+      mimeType = detectedType.mime;
+
+      // For binary files, convert Base64 back to binary
+      try {
+        const binaryString = atob(decodedBase64);
+        const bytes = new Uint8Array(binaryString.length);
+        for (let i = 0; i < binaryString.length; i++) {
+          bytes[i] = binaryString.charCodeAt(i);
+        }
+        blob = new Blob([bytes], { type: mimeType });
+      } catch (err) {
+        console.error('Error creating binary blob:', err);
+        blob = new Blob([output], { type: mimeType });
+      }
+    } else {
+      // Default filenames and text output
+      filename = mode === 'encode' ? 'encoded.base64.txt' : 'decoded.txt';
+      blob = new Blob([output], { type: mimeType });
+    }
+
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+    setToast({ message: 'File downloaded successfully!', type: 'success' });
+  };
+
+  return (
+    <Layout showFullNav={false}>
       <main className="max-w-7xl mx-auto px-4 py-8">
         <div className="mb-6">
           <h1 className="text-4xl font-bold mb-2">
@@ -161,6 +309,22 @@ export default function Base64Tool() {
                 <div className="text-text-muted">
                   {input.length} characters • {new Blob([input]).size} bytes
                 </div>
+                <div>
+                  <input
+                    ref={fileInputRef}
+                    type="file"
+                    onChange={handleFileUpload}
+                    className="hidden"
+                    id="file-upload"
+                  />
+                  <label
+                    htmlFor="file-upload"
+                    className="px-4 py-2 bg-accent text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-accent/40 transition-all cursor-pointer inline-block"
+                  >
+                    📁 Upload File
+                  </label>
+                  <p className="text-xs text-text-muted mt-1">Max {MAX_FILE_SIZE / (1024 * 1024)}MB</p>
+                </div>
               </div>
             </div>
 
@@ -196,9 +360,42 @@ export default function Base64Tool() {
                   >
                     📋 Copy
                   </button>
+                  <button
+                    onClick={handleDownload}
+                    disabled={!output}
+                    className="px-4 py-2 bg-secondary text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-secondary/40 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                  >
+                    💾 Download
+                  </button>
                 </div>
-                <div className="text-text-muted text-sm">
-                  {output && `${output.length} characters • ${new Blob([output]).size} bytes`}
+                <div className="flex flex-col items-end gap-1">
+                  {output && (
+                    <div className="text-text-muted text-sm">
+                      {output.length} characters • {new Blob([output]).size} bytes
+                    </div>
+                  )}
+                  {detectedType && (
+                    <div className="flex items-center gap-2 text-sm">
+                      <span className="text-2xl">{getFileIcon(detectedType.mime)}</span>
+                      <div className="text-right">
+                        <div className="text-text-primary font-semibold">{detectedType.description}</div>
+                        <div className="text-text-muted text-xs">
+                          {detectedType.mime} • .{detectedType.extension}
+                          {detectedType.confidence && (
+                            <span className={`ml-2 px-2 py-0.5 rounded ${
+                              detectedType.confidence === 'high' ? 'bg-green-900/30 text-green-400' :
+                              detectedType.confidence === 'medium' ? 'bg-yellow-900/30 text-yellow-400' :
+                              'bg-gray-900/30 text-gray-400'
+                            }`}>
+                              {detectedType.confidence === 'high' ? '✓ High confidence' :
+                               detectedType.confidence === 'medium' ? '~ Medium confidence' :
+                               '? Low confidence'}
+                            </span>
+                          )}
+                        </div>
+                      </div>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
@@ -227,6 +424,13 @@ export default function Base64Tool() {
           </div>
         </div>
       </main>
-    </div>
+      {toast && (
+        <Toast
+          message={toast.message}
+          type={toast.type}
+          onClose={() => setToast(null)}
+        />
+      )}
+    </Layout>
   );
 }

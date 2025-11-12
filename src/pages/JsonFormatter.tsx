@@ -4,6 +4,7 @@ import { jsonToCSV, jsonToXML, jsonToYAML, jsonToTypeScript } from '../lib/json-
 import MonacoJsonEditor from '../components/MonacoJsonEditor';
 import JsonTree from '../components/JsonTree';
 import JsonDiff from '../components/JsonDiff';
+import Layout from '../components/Layout';
 
 const DEFAULT_OPTIONS: FormatOptions = {
   indent: 4,
@@ -145,27 +146,7 @@ export default function JsonFormatter() {
   };
 
   return (
-    <div className="min-h-screen bg-bg-darkest">
-      <header className="bg-bg-dark border-b border-border sticky top-0 z-50">
-        <nav className="max-w-7xl mx-auto px-4 py-4">
-          <div className="flex justify-between items-center">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center text-xl font-bold shadow-lg shadow-primary/40">
-                ⚡
-              </div>
-              <span className="text-2xl font-bold bg-gradient-to-r from-primary-light to-secondary-light bg-clip-text text-transparent">
-                THE JORD
-              </span>
-            </div>
-            <div className="flex gap-6">
-              <a href="/" className="text-text-secondary hover:text-primary-light transition-colors">
-                ← Back to Tools
-              </a>
-            </div>
-          </div>
-        </nav>
-      </header>
-
+    <Layout showFullNav={false}>
       <main className="max-w-7xl mx-auto px-4 py-8">
         <div className="mb-6">
           <h1 className="text-4xl font-bold mb-2">
@@ -506,6 +487,6 @@ export default function JsonFormatter() {
           </div>
         </div>
       </main>
-    </div>
+    </Layout>
   );
 }

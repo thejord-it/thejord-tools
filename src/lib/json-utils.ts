@@ -48,7 +48,26 @@ export function formatJSON(input: string, options: FormatOptions): string {
       parsed = sortObjectKeys(parsed);
     }
 
-    const formatted = JSON.stringify(parsed, null, options.indent);
+    let formatted = JSON.stringify(parsed, null, options.indent);
+
+    // Convert double quotes to single quotes if requested
+    if (options.quoteStyle === 'single') {
+      // Replace double quotes around keys and string values with single quotes
+      // This regex matches:
+      // - Double quotes at the start of a key/value: "
+      // - The content (non-quote characters or escaped quotes)
+      // - Double quotes at the end: "
+      formatted = formatted.replace(/"([^"\\]|\\.)*"/g, (match) => {
+        // Remove outer double quotes and add single quotes
+        const content = match.slice(1, -1);
+        // Unescape double quotes and escape single quotes
+        const converted = content
+          .replace(/\\"/g, '"')  // Unescape double quotes
+          .replace(/'/g, "\\'"); // Escape single quotes
+        return `'${converted}'`;
+      });
+    }
+
     return formatted;
   } catch (error) {
     throw new Error('Invalid JSON');

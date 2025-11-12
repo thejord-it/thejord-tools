@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import Layout from '../components/Layout';
 
 interface ColorFormats {
   hex: string;
@@ -125,8 +126,8 @@ export default function ColorConverter() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 p-6">
-      <div className="max-w-6xl mx-auto">
+    <Layout showFullNav={false}>
+      <div className="max-w-6xl mx-auto p-6">
         {/* Header */}
         <div className="text-center mb-8">
           <h1 className="text-5xl font-bold mb-4 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 text-transparent bg-clip-text">
@@ -233,6 +234,6 @@ export default function ColorConverter() {
           </div>
         </div>
       </div>
-    </div>
+    </Layout>
   );
 }

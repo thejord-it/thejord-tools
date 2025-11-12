@@ -55,10 +55,10 @@
 
 | Tool | Description | Key Features |
 |------|-------------|--------------|
-| **📝 JSON Formatter** | Format, validate, and convert JSON | Beautify, minify, tree view, JSON↔CSV, JSON↔YAML |
-| **🔤 Base64 Encoder/Decoder** | Encode and decode Base64 strings | Supports text and file encoding |
+| **📝 JSON Formatter** | Format, validate, and convert JSON | Beautify, minify, tree view, JSON↔CSV, JSON↔YAML, single quotes support |
+| **🔤 Base64 Encoder/Decoder** | Encode and decode Base64 strings | File upload/download (5MB max), 50+ file type detection (images, PDF, ZIP, etc.) |
 | **🔍 RegEx Tester** | Test regular expressions live | 30+ predefined patterns, match highlighting |
-| **🔐 Hash Generator** | Generate cryptographic hashes | MD5, SHA-1, SHA-256, SHA-512, SHA-3 |
+| **🔐 Hash Generator** | Generate cryptographic hashes | MD5, SHA-1, SHA-256, SHA-512, SHA-3, toast notifications |
 | **🔗 URL Encoder/Decoder** | Encode and decode URLs | Component and full URL support |
 | **📄 Markdown to HTML** | Convert Markdown to sanitized HTML | Live preview, DOMPurify sanitization |
 | **🎨 Color Converter** | Convert between color formats | HEX, RGB, HSL, CMYK with visual picker |

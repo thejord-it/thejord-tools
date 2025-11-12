@@ -1,5 +1,32 @@
 # Deployment Notes
 
+## 2025-01-12 - Feature Update
+
+### New Features Implemented
+- ✅ **Reusable Layout Component**: Clickable logo on all pages returning to homepage
+- ✅ **Toast Notification System**: Modern toast notifications replacing alerts
+- ✅ **JSON Formatter Enhancement**: Single quotes conversion support
+- ✅ **Base64 File Operations**:
+  - File upload (5MB max size limit)
+  - File download with correct extensions
+  - 50+ file type detection (JPEG, PNG, GIF, PDF, ZIP, MP3, MP4, etc.)
+  - Binary/text file distinction
+  - Magic bytes signature recognition
+
+### Component Updates
+- **Layout.tsx**: New reusable layout with header, footer, and navigation
+- **Toast.tsx**: Toast notification component with slide-in animation
+- **Base64Tool.tsx**: Enhanced with file operations and type detection
+- **HashGenerator.tsx**: Toast notifications for copy operations
+- **file-detection.ts**: New library for file type detection via magic bytes
+
+### Technical Improvements
+- All tool pages now use the Layout component
+- Consistent navigation across all pages
+- Better user feedback with toast notifications
+- Smart file handling (binary vs text)
+- Automatic file type detection and extension mapping
+
 ## 2025-01-12 - Initial Production Release
 
 ### Features Deployed

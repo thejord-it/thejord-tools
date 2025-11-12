@@ -1,4 +1,5 @@
 import Editor from '@monaco-editor/react';
+import { useState } from 'react';
 
 interface MonacoJsonEditorProps {
   value: string;
@@ -13,18 +14,32 @@ export default function MonacoJsonEditor({
   readOnly = false,
   height = '400px'
 }: MonacoJsonEditorProps) {
+  const [isLoading, setIsLoading] = useState(true);
+
   const handleEditorChange = (value: string | undefined) => {
     onChange(value || '');
   };
 
+  const handleEditorDidMount = () => {
+    setIsLoading(false);
+  };
+
   return (
-    <Editor
-      height={height}
-      defaultLanguage="json"
-      value={value}
-      onChange={handleEditorChange}
-      theme="vs-dark"
-      options={{
+    <div style={{ position: 'relative', height }}>
+      {isLoading && (
+        <div className="absolute inset-0 bg-bg-dark flex items-center justify-center z-10">
+          <div className="text-text-secondary">Loading editor...</div>
+        </div>
+      )}
+      <Editor
+        height={height}
+        defaultLanguage="json"
+        value={value}
+        onChange={handleEditorChange}
+        onMount={handleEditorDidMount}
+        theme="vs-dark"
+        loading={<div style={{ display: 'none' }} />}
+        options={{
         readOnly,
         minimap: { enabled: false },
         fontSize: 14,
@@ -45,5 +60,6 @@ export default function MonacoJsonEditor({
         },
       }}
     />
+    </div>
   );
 }

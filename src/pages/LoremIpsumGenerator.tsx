@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Layout from '../components/Layout';
 
 const LOREM_WORDS = [
   'lorem', 'ipsum', 'dolor', 'sit', 'amet', 'consectetur', 'adipiscing', 'elit',
@@ -86,8 +87,8 @@ export default function LoremIpsumGenerator() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 p-6">
-      <div className="max-w-5xl mx-auto">
+    <Layout showFullNav={false}>
+      <div className="max-w-5xl mx-auto p-6">
         {/* Header */}
         <div className="text-center mb-8">
           <h1 className="text-5xl font-bold mb-4 bg-gradient-to-r from-purple-400 via-pink-400 to-red-400 text-transparent bg-clip-text">
@@ -239,6 +240,6 @@ export default function LoremIpsumGenerator() {
           </p>
         </div>
       </div>
-    </div>
+    </Layout>
   );
 }
