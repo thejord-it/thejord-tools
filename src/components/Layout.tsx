@@ -73,6 +73,8 @@ export default function Layout({ children, currentPage = 'tools', showFullNav = 
             {' • '}
             <Link to="/contact" className="hover:text-primary-light transition-colors">Contact</Link>
             {' • '}
+            <Link to="/changelog" className="hover:text-primary-light transition-colors">Changelog</Link>
+            {' • '}
             <a href="https://github.com/thejord-it/thejord-tools/blob/main/SECURITY.md" target="_blank" rel="noopener noreferrer" className="hover:text-primary-light transition-colors">
               Security
             </a>
