@@ -9,6 +9,536 @@ const blogPosts: Record<string, {
   tags: string[]
   content: JSX.Element
 }> = {
+  'come-validare-json-online': {
+    title: 'Come Validare JSON Online Gratis: Guida Completa 2025',
+    author: 'Team THEJORD',
+    date: '2025-01-13',
+    readTime: '8 min',
+    tags: ['Tutorial', 'JSON', 'Developer Tools'],
+    content: (
+      <div className="prose prose-invert max-w-none">
+        <p className="text-xl text-text-secondary leading-relaxed mb-8">
+          Hai bisogno di <strong className="text-primary-light">validare JSON online</strong> in modo rapido e sicuro?
+          In questa guida completa scoprirai come utilizzare il nostro JSON Formatter gratuito e privacy-first per
+          validare, formattare e convertire file JSON senza inviare dati a server esterni.
+        </p>
+
+        <h2 className="text-3xl font-bold mt-12 mb-4 text-text-primary">🔍 Cos'è JSON e Perché Validarlo?</h2>
+        <p className="text-text-secondary leading-relaxed mb-6">
+          JSON (JavaScript Object Notation) è un formato di scambio dati leggero e universale. Validare JSON significa
+          verificare che la sintassi sia corretta secondo lo standard RFC 8259. Errori comuni includono:
+        </p>
+
+        <ul className="list-disc list-inside space-y-2 text-text-secondary mb-8">
+          <li>Virgole mancanti o in eccesso</li>
+          <li>Parentesi graffe o quadre non bilanciate</li>
+          <li>Stringhe non quotate correttamente</li>
+          <li>Valori non validi (es. NaN, undefined)</li>
+          <li>Commenti non supportati dal formato JSON standard</li>
+        </ul>
+
+        <h2 className="text-3xl font-bold mt-12 mb-4 text-text-primary">⚡ Come Utilizzare il JSON Validator</h2>
+
+        <h3 className="text-2xl font-bold mt-8 mb-3 text-text-primary">Passo 1: Incolla il Tuo JSON</h3>
+        <p className="text-text-secondary leading-relaxed mb-6">
+          Accedi al nostro <a href="/json-formatter" className="text-primary-light hover:underline">JSON Formatter online</a> e
+          incolla il tuo codice JSON nel pannello di sinistra. Il tool supporta file fino a 10MB.
+        </p>
+
+        <h3 className="text-2xl font-bold mt-8 mb-3 text-text-primary">Passo 2: Validazione Automatica</h3>
+        <p className="text-text-secondary leading-relaxed mb-6">
+          Il validatore analizza istantaneamente il codice. Se ci sono errori, vedrai:
+        </p>
+        <ul className="list-disc list-inside space-y-2 text-text-secondary mb-8">
+          <li><strong className="text-primary-light">Messaggio di errore</strong> - Descrizione dell'errore trovato</li>
+          <li><strong className="text-primary-light">Posizione esatta</strong> - Riga e colonna dell'errore</li>
+          <li><strong className="text-primary-light">Suggerimento</strong> - Come correggere il problema</li>
+        </ul>
+
+        <h3 className="text-2xl font-bold mt-8 mb-3 text-text-primary">Passo 3: Formattazione e Beautify</h3>
+        <p className="text-text-secondary leading-relaxed mb-6">
+          Una volta validato, puoi formattare il JSON con:
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+          <div className="bg-bg-dark border border-border rounded-lg p-4">
+            <h4 className="font-bold text-primary-light mb-2">Beautify (2 spazi)</h4>
+            <p className="text-text-secondary text-sm">Formattazione leggibile con indentazione a 2 spazi</p>
+          </div>
+          <div className="bg-bg-dark border border-border rounded-lg p-4">
+            <h4 className="font-bold text-primary-light mb-2">Beautify (4 spazi)</h4>
+            <p className="text-text-secondary text-sm">Indentazione classica a 4 spazi</p>
+          </div>
+          <div className="bg-bg-dark border border-border rounded-lg p-4">
+            <h4 className="font-bold text-primary-light mb-2">Minify</h4>
+            <p className="text-text-secondary text-sm">Compressione su singola riga per ridurre dimensioni</p>
+          </div>
+          <div className="bg-bg-dark border border-border rounded-lg p-4">
+            <h4 className="font-bold text-primary-light mb-2">Single Quotes</h4>
+            <p className="text-text-secondary text-sm">Converti virgolette doppie in singole</p>
+          </div>
+        </div>
+
+        <h2 className="text-3xl font-bold mt-12 mb-4 text-text-primary">🛠️ Funzionalità Avanzate</h2>
+
+        <h3 className="text-2xl font-bold mt-8 mb-3 text-text-primary">Tree View Interattiva</h3>
+        <p className="text-text-secondary leading-relaxed mb-6">
+          Visualizza la struttura JSON come albero espandibile/collassabile. Ideale per navigare grandi file JSON con
+          centinaia di chiavi nested.
+        </p>
+
+        <h3 className="text-2xl font-bold mt-8 mb-3 text-text-primary">Conversione Formati</h3>
+        <p className="text-text-secondary leading-relaxed mb-6">
+          Converti il tuo JSON in altri formati con un click:
+        </p>
+        <ul className="list-disc list-inside space-y-2 text-text-secondary mb-8">
+          <li><strong className="text-primary-light">JSON → CSV</strong> - Esporta in formato tabellare</li>
+          <li><strong className="text-primary-light">JSON → XML</strong> - Converti in XML strutturato</li>
+          <li><strong className="text-primary-light">JSON → YAML</strong> - Formato human-readable</li>
+          <li><strong className="text-primary-light">JSON → TypeScript</strong> - Genera interfacce TypeScript</li>
+        </ul>
+
+        <h2 className="text-3xl font-bold mt-12 mb-4 text-text-primary">🔒 Privacy e Sicurezza</h2>
+        <p className="text-text-secondary leading-relaxed mb-6">
+          A differenza di altri validatori JSON online, THEJORD.IT garantisce:
+        </p>
+        <ul className="list-none space-y-3 mb-8">
+          <li className="flex items-start gap-3">
+            <span className="text-green-500 text-xl">✓</span>
+            <div>
+              <strong className="text-text-primary">100% Client-Side Processing</strong>
+              <p className="text-text-secondary text-sm">Il tuo JSON non lascia mai il browser. Zero upload a server esterni.</p>
+            </div>
+          </li>
+          <li className="flex items-start gap-3">
+            <span className="text-green-500 text-xl">✓</span>
+            <div>
+              <strong className="text-text-primary">Zero Tracking</strong>
+              <p className="text-text-secondary text-sm">Nessun cookie, nessuna analytics, nessun log.</p>
+            </div>
+          </li>
+          <li className="flex items-start gap-3">
+            <span className="text-green-500 text-xl">✓</span>
+            <div>
+              <strong className="text-text-primary">Open Source</strong>
+              <p className="text-text-secondary text-sm">Codice verificabile pubblicamente su GitHub.</p>
+            </div>
+          </li>
+        </ul>
+
+        <h2 className="text-3xl font-bold mt-12 mb-4 text-text-primary">💡 Casi d'Uso Comuni</h2>
+
+        <div className="space-y-4 mb-8">
+          <div className="bg-bg-dark border border-border rounded-lg p-4">
+            <h4 className="font-bold text-primary-light mb-2">Debug API Response</h4>
+            <p className="text-text-secondary text-sm">
+              Hai ricevuto una risposta JSON da un'API ma è tutta su una riga? Usa il beautify per renderla leggibile
+              e debuggare eventuali errori.
+            </p>
+          </div>
+          <div className="bg-bg-dark border border-border rounded-lg p-4">
+            <h4 className="font-bold text-primary-light mb-2">Configurazione File</h4>
+            <p className="text-text-secondary text-sm">
+              Valida file di configurazione come package.json, tsconfig.json, .eslintrc prima del commit.
+            </p>
+          </div>
+          <div className="bg-bg-dark border border-border rounded-lg p-4">
+            <h4 className="font-bold text-primary-light mb-2">Data Migration</h4>
+            <p className="text-text-secondary text-sm">
+              Converti JSON in CSV per import su database o Excel, oppure in YAML per configurazioni Kubernetes.
+            </p>
+          </div>
+        </div>
+
+        <h2 className="text-3xl font-bold mt-12 mb-4 text-text-primary">🚀 Prova Subito il JSON Validator</h2>
+        <div className="bg-gradient-to-r from-primary/20 to-secondary/20 border border-primary/30 rounded-xl p-6 mt-8">
+          <h3 className="text-2xl font-bold mb-3 text-text-primary">Inizia Ora - Gratis e Senza Registrazione</h3>
+          <p className="text-text-secondary mb-4">
+            Valida, formatta e converti JSON in secondi. Nessun limite, nessuna registrazione richiesta.
+          </p>
+          <Link
+            to="/json-formatter"
+            className="inline-block bg-primary hover:bg-primary-light text-bg-darkest px-6 py-3 rounded-lg font-semibold transition-colors"
+          >
+            Apri JSON Formatter →
+          </Link>
+        </div>
+
+        <hr className="border-border my-12" />
+
+        <h2 className="text-3xl font-bold mt-12 mb-4 text-text-primary">❓ FAQ - Domande Frequenti</h2>
+
+        <div className="space-y-6 mb-8">
+          <div>
+            <h4 className="font-bold text-text-primary mb-2">È sicuro validare JSON sensibili online?</h4>
+            <p className="text-text-secondary text-sm">
+              Sì, su THEJORD.IT. Il processing è 100% client-side, quindi i tuoi dati non vengono mai inviati a server esterni.
+              Puoi anche usarlo offline dopo il primo caricamento.
+            </p>
+          </div>
+          <div>
+            <h4 className="font-bold text-text-primary mb-2">C'è un limite di dimensione per i file JSON?</h4>
+            <p className="text-text-secondary text-sm">
+              Il tool supporta file JSON fino a 10MB. Per file più grandi, consigliamo di utilizzare tool da riga di comando
+              come jq o validatori offline.
+            </p>
+          </div>
+          <div>
+            <h4 className="font-bold text-text-primary mb-2">Posso usare il validatore senza connessione internet?</h4>
+            <p className="text-text-secondary text-sm">
+              Sì! Dopo la prima visita, THEJORD.IT funziona offline grazie al service worker. Perfetto per validare JSON
+              anche senza rete.
+            </p>
+          </div>
+        </div>
+      </div>
+    )
+  },
+
+  'base64-encoder-decoder-guida': {
+    title: 'Base64 Encoder Online: Guida Completa con Rilevamento File',
+    author: 'Team THEJORD',
+    date: '2025-01-13',
+    readTime: '7 min',
+    tags: ['Tutorial', 'Base64', 'Security'],
+    content: (
+      <div className="prose prose-invert max-w-none">
+        <p className="text-xl text-text-secondary leading-relaxed mb-8">
+          Cerchi un <strong className="text-primary-light">Base64 encoder online</strong> sicuro e potente?
+          La nostra guida ti mostra come codificare e decodificare testo e file in Base64, con rilevamento automatico
+          di 50+ tipi di file per massima precisione.
+        </p>
+
+        <h2 className="text-3xl font-bold mt-12 mb-4 text-text-primary">🔤 Cos'è Base64 e Quando Usarlo</h2>
+        <p className="text-text-secondary leading-relaxed mb-6">
+          Base64 è uno schema di codifica che converte dati binari in testo ASCII. Utilizzato principalmente per:
+        </p>
+
+        <ul className="list-disc list-inside space-y-2 text-text-secondary mb-8">
+          <li><strong className="text-primary-light">Embedding file in HTML/CSS</strong> - Data URL per immagini inline</li>
+          <li><strong className="text-primary-light">Email attachment</strong> - Standard MIME per allegati</li>
+          <li><strong className="text-primary-light">API REST</strong> - Trasmissione sicura di dati binari in JSON</li>
+          <li><strong className="text-primary-light">Web Token</strong> - JWT (JSON Web Token) encoding</li>
+          <li><strong className="text-primary-light">Obfuscation</strong> - Nascondere testo semplice (NON per sicurezza!)</li>
+        </ul>
+
+        <h2 className="text-3xl font-bold mt-12 mb-4 text-text-primary">⚡ Come Codificare in Base64</h2>
+
+        <h3 className="text-2xl font-bold mt-8 mb-3 text-text-primary">Codifica Testo</h3>
+        <p className="text-text-secondary leading-relaxed mb-6">
+          1. Vai su <a href="/base64" className="text-primary-light hover:underline">Base64 Encoder</a><br/>
+          2. Seleziona la tab "Encode"<br/>
+          3. Incolla il testo da codificare<br/>
+          4. Ottieni istantaneamente il risultato Base64
+        </p>
+
+        <div className="bg-bg-dark border border-border rounded-lg p-4 mb-8">
+          <p className="text-text-muted text-sm mb-2">Esempio:</p>
+          <p className="text-text-secondary font-mono text-sm mb-2">Input: <code className="bg-bg-darkest px-2 py-1 rounded">Hello World!</code></p>
+          <p className="text-text-secondary font-mono text-sm">Output: <code className="bg-bg-darkest px-2 py-1 rounded">SGVsbG8gV29ybGQh</code></p>
+        </div>
+
+        <h3 className="text-2xl font-bold mt-8 mb-3 text-text-primary">Codifica File (Immagini, PDF, ZIP)</h3>
+        <p className="text-text-secondary leading-relaxed mb-6">
+          Il nostro encoder supporta <strong className="text-primary-light">upload file fino a 5MB</strong> con rilevamento
+          automatico del tipo:
+        </p>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+          <div className="bg-bg-dark border border-border rounded-lg p-4">
+            <h4 className="font-bold text-primary-light mb-2">🖼️ Immagini</h4>
+            <p className="text-text-secondary text-sm">JPEG, PNG, GIF, WebP, BMP, TIFF, ICO</p>
+          </div>
+          <div className="bg-bg-dark border border-border rounded-lg p-4">
+            <h4 className="font-bold text-primary-light mb-2">📄 Documenti</h4>
+            <p className="text-text-secondary text-sm">PDF, DOC/DOCX, XLS/XLSX, PPT/PPTX</p>
+          </div>
+          <div className="bg-bg-dark border border-border rounded-lg p-4">
+            <h4 className="font-bold text-primary-light mb-2">🗜️ Archivi</h4>
+            <p className="text-text-secondary text-sm">ZIP, RAR, 7-Zip, GZIP, BZIP2, TAR</p>
+          </div>
+          <div className="bg-bg-dark border border-border rounded-lg p-4">
+            <h4 className="font-bold text-primary-light mb-2">🎵 Media</h4>
+            <p className="text-text-secondary text-sm">MP3, MP4, FLAC, WAV, OGG, WebM</p>
+          </div>
+        </div>
+
+        <h2 className="text-3xl font-bold mt-12 mb-4 text-text-primary">🔓 Come Decodificare Base64</h2>
+        <p className="text-text-secondary leading-relaxed mb-6">
+          La decodifica è altrettanto semplice:
+        </p>
+
+        <ol className="list-decimal list-inside space-y-3 text-text-secondary mb-8">
+          <li>Seleziona la tab "Decode"</li>
+          <li>Incolla la stringa Base64 (supporta anche data URL prefix)</li>
+          <li>Il tool rileva automaticamente il tipo di file tramite <strong className="text-primary-light">magic bytes</strong></li>
+          <li>Vedi un badge con tipo file, MIME type ed estensione corretta</li>
+          <li>Clicca "Download" per salvare il file con estensione automatica</li>
+        </ol>
+
+        <h2 className="text-3xl font-bold mt-12 mb-4 text-text-primary">🎯 Rilevamento File Automatico</h2>
+        <p className="text-text-secondary leading-relaxed mb-6">
+          La nostra tecnologia di <strong className="text-primary-light">magic bytes detection</strong> analizza i primi byte
+          del file decodificato per identificare con precisione il tipo. Supportiamo 50+ signature:
+        </p>
+
+        <div className="bg-bg-dark border border-border rounded-lg p-6 mb-8">
+          <h4 className="font-bold text-primary-light mb-3">Livelli di Confidenza</h4>
+          <div className="space-y-2 text-text-secondary text-sm">
+            <div className="flex items-center gap-2">
+              <span className="px-3 py-1 bg-green-900/30 text-green-400 rounded text-xs">✓ High confidence</span>
+              <span>Magic bytes corrispondono esattamente (es. FF D8 FF = JPEG)</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="px-3 py-1 bg-yellow-900/30 text-yellow-400 rounded text-xs">~ Medium confidence</span>
+              <span>Rilevato formato testuale (JSON, XML, HTML, CSS)</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="px-3 py-1 bg-gray-900/30 text-gray-400 rounded text-xs">? Low confidence</span>
+              <span>Testo generico, nessun formato riconosciuto</span>
+            </div>
+          </div>
+        </div>
+
+        <h2 className="text-3xl font-bold mt-12 mb-4 text-text-primary">🔒 Privacy e Sicurezza</h2>
+        <p className="text-text-secondary leading-relaxed mb-6">
+          Perché scegliere il nostro Base64 encoder rispetto ad altri?
+        </p>
+
+        <ul className="list-none space-y-3 mb-8">
+          <li className="flex items-start gap-3">
+            <span className="text-green-500 text-xl">✓</span>
+            <div>
+              <strong className="text-text-primary">Zero Data Transmission</strong>
+              <p className="text-text-secondary text-sm">
+                File e testo vengono processati esclusivamente nel browser. Nessun upload a server.
+              </p>
+            </div>
+          </li>
+          <li className="flex items-start gap-3">
+            <span className="text-green-500 text-xl">✓</span>
+            <div>
+              <strong className="text-text-primary">File Binari Sicuri</strong>
+              <p className="text-text-secondary text-sm">
+                Supporto completo per ArrayBuffer. Immagini, PDF e archivi vengono gestiti correttamente senza corruzione.
+              </p>
+            </div>
+          </li>
+          <li className="flex items-start gap-3">
+            <span className="text-green-500 text-xl">✓</span>
+            <div>
+              <strong className="text-text-primary">No Logs, No Tracking</strong>
+              <p className="text-text-secondary text-sm">
+                Zero analytics, cookie o fingerprinting. La tua privacy è garantita.
+              </p>
+            </div>
+          </li>
+        </ul>
+
+        <h2 className="text-3xl font-bold mt-12 mb-4 text-text-primary">💼 Casi d'Uso Pratici</h2>
+
+        <div className="space-y-4 mb-8">
+          <div className="bg-bg-dark border border-border rounded-lg p-4">
+            <h4 className="font-bold text-primary-light mb-2">Embedding Immagini in HTML</h4>
+            <p className="text-text-secondary text-sm mb-2">
+              Codifica un'immagine e usala come data URL:
+            </p>
+            <code className="block bg-bg-darkest p-2 rounded text-xs text-text-muted overflow-x-auto">
+              {`<img src="data:image/png;base64,iVBORw0KGgo..." />`}
+            </code>
+          </div>
+          <div className="bg-bg-dark border border-border rounded-lg p-4">
+            <h4 className="font-bold text-primary-light mb-2">Trasmissione File via API</h4>
+            <p className="text-text-secondary text-sm">
+              Invia file binari tramite JSON payload codificandoli in Base64
+            </p>
+          </div>
+          <div className="bg-bg-dark border border-border rounded-lg p-4">
+            <h4 className="font-bold text-primary-light mb-2">Download File da Base64</h4>
+            <p className="text-text-secondary text-sm">
+              Ricevuto Base64 da API? Decodifica e scarica il file con estensione corretta automatica
+            </p>
+          </div>
+        </div>
+
+        <div className="bg-gradient-to-r from-primary/20 to-secondary/20 border border-primary/30 rounded-xl p-6 mt-8">
+          <h3 className="text-2xl font-bold mb-3 text-text-primary">Prova il Base64 Encoder</h3>
+          <p className="text-text-secondary mb-4">
+            Codifica e decodifica testo e file in Base64. Gratis, veloce e 100% privacy-first.
+          </p>
+          <Link
+            to="/base64"
+            className="inline-block bg-primary hover:bg-primary-light text-bg-darkest px-6 py-3 rounded-lg font-semibold transition-colors"
+          >
+            Apri Base64 Tool →
+          </Link>
+        </div>
+      </div>
+    )
+  },
+
+  'regex-tester-italiano-pattern': {
+    title: 'RegEx Tester Italiano: 30+ Pattern Pronti all\'Uso',
+    author: 'Team THEJORD',
+    date: '2025-01-13',
+    readTime: '6 min',
+    tags: ['Tutorial', 'RegEx', 'Developer Tools'],
+    content: (
+      <div className="prose prose-invert max-w-none">
+        <p className="text-xl text-text-secondary leading-relaxed mb-8">
+          Le <strong className="text-primary-light">espressioni regolari (RegEx)</strong> sono potenti ma complesse.
+          Il nostro RegEx Tester online ti offre 30+ pattern predefiniti e testing in tempo reale per validare email,
+          URL, numeri di telefono italiani e molto altro.
+        </p>
+
+        <h2 className="text-3xl font-bold mt-12 mb-4 text-text-primary">🔍 Cos'è un RegEx Tester?</h2>
+        <p className="text-text-secondary leading-relaxed mb-6">
+          Un RegEx Tester è un tool che permette di:
+        </p>
+
+        <ul className="list-disc list-inside space-y-2 text-text-secondary mb-8">
+          <li>Testare espressioni regolari su testo campione</li>
+          <li>Visualizzare match in tempo reale con highlighting</li>
+          <li>Debuggare pattern complessi prima di usarli nel codice</li>
+          <li>Sperimentare con flag (global, multiline, case-insensitive)</li>
+        </ul>
+
+        <h2 className="text-3xl font-bold mt-12 mb-4 text-text-primary">⚡ Come Usare il RegEx Tester</h2>
+
+        <ol className="list-decimal list-inside space-y-3 text-text-secondary mb-8">
+          <li>Vai su <a href="/regex-tester" className="text-primary-light hover:underline">RegEx Tester</a></li>
+          <li>Scegli un pattern dalla libreria di 30+ esempi oppure scrivi il tuo</li>
+          <li>Inserisci il testo da testare nel campo "Test String"</li>
+          <li>Vedi i match evidenziati in tempo reale</li>
+          <li>Modifica flag (g, m, i, s) per comportamenti diversi</li>
+        </ol>
+
+        <h2 className="text-3xl font-bold mt-12 mb-4 text-text-primary">📚 Libreria Pattern Predefiniti</h2>
+
+        <h3 className="text-2xl font-bold mt-8 mb-3 text-text-primary">Validazione Email e Web</h3>
+        <div className="space-y-3 mb-8">
+          <div className="bg-bg-dark border border-border rounded-lg p-4">
+            <h4 className="font-bold text-primary-light mb-2">Email Address</h4>
+            <code className="block bg-bg-darkest p-2 rounded text-xs text-text-muted overflow-x-auto mb-2">
+              /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{`{2,}`}$/
+            </code>
+            <p className="text-text-secondary text-sm">Valida indirizzi email standard (RFC 5322)</p>
+          </div>
+          <div className="bg-bg-dark border border-border rounded-lg p-4">
+            <h4 className="font-bold text-primary-light mb-2">URL/Website</h4>
+            <code className="block bg-bg-darkest p-2 rounded text-xs text-text-muted overflow-x-auto mb-2">
+              /^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{`{1,256}`}\.[a-zA-Z0-9()]{`{1,6}`}\b/
+            </code>
+            <p className="text-text-secondary text-sm">Match HTTP/HTTPS URLs completi</p>
+          </div>
+        </div>
+
+        <h3 className="text-2xl font-bold mt-8 mb-3 text-text-primary">Formati Italiani</h3>
+        <div className="space-y-3 mb-8">
+          <div className="bg-bg-dark border border-border rounded-lg p-4">
+            <h4 className="font-bold text-primary-light mb-2">Codice Fiscale Italiano</h4>
+            <code className="block bg-bg-darkest p-2 rounded text-xs text-text-muted overflow-x-auto mb-2">
+              /^[A-Z]{`{6}`}[0-9]{`{2}`}[A-Z][0-9]{`{2}`}[A-Z][0-9]{`{3}`}[A-Z]$/
+            </code>
+            <p className="text-text-secondary text-sm">Formato: RSSMRA85T10A562S</p>
+          </div>
+          <div className="bg-bg-dark border border-border rounded-lg p-4">
+            <h4 className="font-bold text-primary-light mb-2">Partita IVA</h4>
+            <code className="block bg-bg-darkest p-2 rounded text-xs text-text-muted overflow-x-auto mb-2">
+              /^[0-9]{`{11}`}$/
+            </code>
+            <p className="text-text-secondary text-sm">11 cifre numeriche</p>
+          </div>
+          <div className="bg-bg-dark border border-border rounded-lg p-4">
+            <h4 className="font-bold text-primary-light mb-2">Telefono Italiano</h4>
+            <code className="block bg-bg-darkest p-2 rounded text-xs text-text-muted overflow-x-auto mb-2">
+              /^(\+39)?[\s]?[0-9]{`{2,4}`}[\s]?[0-9]{`{6,8}`}$/
+            </code>
+            <p className="text-text-secondary text-sm">Supporta +39, spazi, fissi e mobili</p>
+          </div>
+        </div>
+
+        <h3 className="text-2xl font-bold mt-8 mb-3 text-text-primary">Validazione Dati</h3>
+        <div className="space-y-3 mb-8">
+          <div className="bg-bg-dark border border-border rounded-lg p-4">
+            <h4 className="font-bold text-primary-light mb-2">IPv4 Address</h4>
+            <code className="block bg-bg-darkest p-2 rounded text-xs text-text-muted overflow-x-auto mb-2">
+              /^((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){`{3}`}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/
+            </code>
+          </div>
+          <div className="bg-bg-dark border border-border rounded-lg p-4">
+            <h4 className="font-bold text-primary-light mb-2">Data (GG/MM/AAAA)</h4>
+            <code className="block bg-bg-darkest p-2 rounded text-xs text-text-muted overflow-x-auto mb-2">
+              /^(0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[012])\/\d{`{4}`}$/
+            </code>
+          </div>
+          <div className="bg-bg-dark border border-border rounded-lg p-4">
+            <h4 className="font-bold text-primary-light mb-2">Carta di Credito</h4>
+            <code className="block bg-bg-darkest p-2 rounded text-xs text-text-muted overflow-x-auto mb-2">
+              /^[0-9]{`{4}`}[\s\-]?[0-9]{`{4}`}[\s\-]?[0-9]{`{4}`}[\s\-]?[0-9]{`{4}`}$/
+            </code>
+          </div>
+        </div>
+
+        <h2 className="text-3xl font-bold mt-12 mb-4 text-text-primary">🎯 Flag e Modificatori</h2>
+        <p className="text-text-secondary leading-relaxed mb-6">
+          Il nostro tester supporta tutti i flag JavaScript:
+        </p>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+          <div className="bg-bg-dark border border-border rounded-lg p-4">
+            <h4 className="font-bold text-primary-light mb-2">g (global)</h4>
+            <p className="text-text-secondary text-sm">Trova tutti i match, non solo il primo</p>
+          </div>
+          <div className="bg-bg-dark border border-border rounded-lg p-4">
+            <h4 className="font-bold text-primary-light mb-2">i (case-insensitive)</h4>
+            <p className="text-text-secondary text-sm">Ignora maiuscole/minuscole</p>
+          </div>
+          <div className="bg-bg-dark border border-border rounded-lg p-4">
+            <h4 className="font-bold text-primary-light mb-2">m (multiline)</h4>
+            <p className="text-text-secondary text-sm">^ e $ matchano inizio/fine riga</p>
+          </div>
+          <div className="bg-bg-dark border border-border rounded-lg p-4">
+            <h4 className="font-bold text-primary-light mb-2">s (dotAll)</h4>
+            <p className="text-text-secondary text-sm">. matcha anche newline</p>
+          </div>
+        </div>
+
+        <h2 className="text-3xl font-bold mt-12 mb-4 text-text-primary">💡 Esempi Pratici</h2>
+
+        <div className="space-y-4 mb-8">
+          <div className="bg-bg-dark border border-border rounded-lg p-4">
+            <h4 className="font-bold text-primary-light mb-2">Estrarre Tag HTML</h4>
+            <p className="text-text-secondary text-sm mb-2">Pattern: <code className="bg-bg-darkest px-2 py-1 rounded">{`/<([a-z]+)([^<]+)*(?:>(.*)<\/\\1>|\\s+\/>)/gi`}</code></p>
+            <p className="text-text-muted text-xs">Cattura tag HTML apertura/chiusura con attributi</p>
+          </div>
+          <div className="bg-bg-dark border border-border rounded-lg p-4">
+            <h4 className="font-bold text-primary-light mb-2">Validare Password Sicura</h4>
+            <p className="text-text-secondary text-sm mb-2">Pattern: <code className="bg-bg-darkest px-2 py-1 rounded">{`/^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{8,}$/`}</code></p>
+            <p className="text-text-muted text-xs">Min 8 char, maiusc, minusc, numero, simbolo</p>
+          </div>
+          <div className="bg-bg-dark border border-border rounded-lg p-4">
+            <h4 className="font-bold text-primary-light mb-2">Match Hex Color Codes</h4>
+            <p className="text-text-secondary text-sm mb-2">Pattern: <code className="bg-bg-darkest px-2 py-1 rounded">/^#([A-Fa-f0-9]{`{6}`}|[A-Fa-f0-9]{`{3}`})$/</code></p>
+            <p className="text-text-muted text-xs">Formato: #FFF o #FFFFFF</p>
+          </div>
+        </div>
+
+        <div className="bg-gradient-to-r from-primary/20 to-secondary/20 border border-primary/30 rounded-xl p-6 mt-8">
+          <h3 className="text-2xl font-bold mb-3 text-text-primary">Testa le Tue RegEx</h3>
+          <p className="text-text-secondary mb-4">
+            30+ pattern predefiniti, testing in tempo reale, highlighting dei match. Gratis e senza registrazione.
+          </p>
+          <Link
+            to="/regex-tester"
+            className="inline-block bg-primary hover:bg-primary-light text-bg-darkest px-6 py-3 rounded-lg font-semibold transition-colors"
+          >
+            Apri RegEx Tester →
+          </Link>
+        </div>
+      </div>
+    )
+  },
+
   'lancio-thejord-it': {
     title: 'Lancio di THEJORD.IT: Developer Tools Privacy-First Made in Italy',
     author: 'Team THEJORD',

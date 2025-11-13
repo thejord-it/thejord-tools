@@ -1,20 +1,76 @@
 <div align="center">
 
-# 🛠️ THEJORD.IT
+<img src="https://img.shields.io/badge/⚡-THEJORD.IT-FF6B6B?style=for-the-badge&labelColor=1a1a2e" alt="THEJORD.IT">
+
+# 🛠️ **THEJORD.IT**
 
 ### **The Italian Alternative to IT-Tools | Privacy-First Developer Utilities**
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![React](https://img.shields.io/badge/React-18.2.0-61DAFB?logo=react&logoColor=white)](https://reactjs.org/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.2.2-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
-[![Vite](https://img.shields.io/badge/Vite-4.5.0-646CFF?logo=vite&logoColor=white)](https://vitejs.dev/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.3.5-38B2AC?logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![GitHub Stars](https://img.shields.io/github/stars/thejord-it/thejord-tools?style=flat-square&logo=github&color=yellow)](https://github.com/thejord-it/thejord-tools/stargazers)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg?style=flat-square)](https://opensource.org/licenses/MIT)
+[![React](https://img.shields.io/badge/React-18.2.0-61DAFB?logo=react&logoColor=white&style=flat-square)](https://reactjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.2.2-3178C6?logo=typescript&logoColor=white&style=flat-square)](https://www.typescriptlang.org/)
+[![Vite](https://img.shields.io/badge/Vite-4.5.0-646CFF?logo=vite&logoColor=white&style=flat-square)](https://vitejs.dev/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.3.5-38B2AC?logo=tailwind-css&logoColor=white&style=flat-square)](https://tailwindcss.com/)
+[![Made in Italy](https://img.shields.io/badge/Made_in-Italy_🇮🇹-009246?style=flat-square&labelColor=CE2B37)](https://thejord.it)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://github.com/thejord-it/thejord-tools/pulls)
 
-[🌐 **Live Demo**](https://thejord.it) • [📖 **Documentation**](./docs/) • [🐛 **Report Bug**](https://github.com/thejord-it/thejord-tools/issues) • [✨ **Request Feature**](https://github.com/thejord-it/thejord-tools/issues)
+<p align="center">
+  <a href="https://thejord.it"><strong>🌐 Live Demo</strong></a> •
+  <a href="./docs/"><strong>📖 Documentation</strong></a> •
+  <a href="https://github.com/thejord-it/thejord-tools/issues"><strong>🐛 Report Bug</strong></a> •
+  <a href="https://github.com/thejord-it/thejord-tools/issues"><strong>✨ Request Feature</strong></a>
+</p>
 
-**Modern, fast, and free tools for developers. A comprehensive suite of online utilities built with React, TypeScript, and Tailwind CSS.**
+**Modern, fast, and free tools for developers.**
+**A comprehensive suite of online utilities built with React, TypeScript, and Tailwind CSS.**
 
-[🇮🇹 Italian](#italiano) | [🇬🇧 English](#english)
+<kbd>[🇮🇹 Italian](#italiano)</kbd> | <kbd>[🇬🇧 English](#english)</kbd>
+
+---
+
+</div>
+
+> **⚠️ Privacy-First Philosophy**: All tools run 100% in your browser. Zero data transmission. Zero tracking. Zero cookies.
+
+<div align="center">
+
+## 🎉 **What's New in v1.1.0** (January 2025)
+
+🔐 **Base64 File Operations** - Upload/download files with 50+ type detection
+🎨 **Toast Notifications** - Modern UI feedback replacing browser alerts
+📄 **JSON Single Quotes** - Convert JSON double quotes to single quotes
+🎯 **Reusable Layout** - Consistent navigation across all tools
+📖 **User Guide** - Complete documentation for all tools
+
+[View Full Changelog →](./CHANGELOG.md)
+
+---
+
+### 🚀 **Quick Links**
+
+| 📄 [JSON Formatter](https://thejord.it/json-formatter) | 🔐 [Base64 Tool](https://thejord.it/base64) | 🔍 [RegEx Tester](https://thejord.it/regex-tester) |
+|:--:|:--:|:--:|
+| **[Hash Generator](https://thejord.it/hash-generator)** | **[URL Tool](https://thejord.it/url-tool)** | **[Color Picker](https://thejord.it/color)** |
+
+</div>
+
+---
+
+## 💎 Why Choose THEJORD.IT?
+
+<div align="center">
+
+| 🏆 Feature | THEJORD.IT | Other Tools |
+|:-----------|:----------:|:-----------:|
+| **Privacy-First** | ✅ 100% Client-Side | ❌ Server Upload |
+| **No Tracking** | ✅ Zero Analytics | ❌ Google Analytics |
+| **No Cookies** | ✅ None | ❌ Tracking Cookies |
+| **Offline Mode** | ✅ Works Offline | ❌ Requires Internet |
+| **Open Source** | ✅ MIT License | ⚠️ Varies |
+| **File Support** | ✅ 50+ File Types | ⚠️ Limited |
+| **Modern UI** | ✅ React 18 + Tailwind | ⚠️ jQuery/Bootstrap |
+| **Italian First** | ✅ IT Community | ❌ English Only |
 
 </div>
 
@@ -25,27 +81,27 @@
 <table>
   <tr>
     <td align="center">🔒</td>
-    <td><b>Privacy-First</b><br/>All processing happens in your browser. Zero data sent to servers.</td>
+    <td><b>Privacy-First</b><br/>All processing happens in your browser. Zero data sent to servers. <a href="#-security--privacy">Learn more →</a></td>
   </tr>
   <tr>
     <td align="center">⚡</td>
-    <td><b>Lightning Fast</b><br/>Built with React 18, Vite, and optimized for performance.</td>
+    <td><b>Lightning Fast</b><br/>Built with React 18, Vite, and optimized for performance. Bundle size: 131KB gzipped.</td>
   </tr>
   <tr>
     <td align="center">🎨</td>
-    <td><b>Beautiful UI</b><br/>Clean, modern dark theme with intuitive design.</td>
+    <td><b>Beautiful UI</b><br/>Clean, modern dark theme with intuitive design. Fully responsive.</td>
   </tr>
   <tr>
     <td align="center">🌍</td>
-    <td><b>100% Client-Side</b><br/>Works offline. No backend required.</td>
+    <td><b>100% Client-Side</b><br/>Works offline after first load. No backend required.</td>
   </tr>
   <tr>
     <td align="center">🇮🇹</td>
-    <td><b>Made in Italy</b><br/>The Italian alternative to IT-Tools.</td>
+    <td><b>Made in Italy</b><br/>The Italian alternative to IT-Tools with focus on IT community.</td>
   </tr>
   <tr>
-    <td align="center">📱</td>
-    <td><b>Responsive</b><br/>Works perfectly on desktop, tablet, and mobile.</td>
+    <td align="center">🔧</td>
+    <td><b>9 Essential Tools</b><br/>Carefully curated developer utilities. <a href="#%EF%B8%8F-available-tools">See all →</a></td>
   </tr>
 </table>
 
@@ -69,34 +125,48 @@
 
 ## 🚀 Quick Start
 
-### Prerequisites
+<div align="center">
 
-- Node.js 18+
-- npm 9+
+### 🎯 **Three Ways to Use THEJORD.IT**
 
-### Installation
+| 🌐 **Online** | 💻 **Local Dev** | 🐳 **Docker** |
+|:--------------:|:----------------:|:-------------:|
+| [**Visit thejord.it**](https://thejord.it)<br/>No installation needed | Clone & run locally<br/>Full dev environment | Pull & run container<br/>Production-ready |
+| ✅ **Instant** | ⚡ **Fast** | 🔒 **Secure** |
+
+</div>
+
+---
+
+### 💻 Local Development
+
+**Prerequisites:** Node.js 18+ • npm 9+
 
 ```bash
-# Clone the repository
+# 1️⃣ Clone the repository
 git clone https://github.com/thejord-it/thejord-tools.git
 cd thejord-tools
 
-# Install dependencies
+# 2️⃣ Install dependencies
 npm install
 
-# Start development server
+# 3️⃣ Start development server
 npm run dev
+
+# ✅ Open http://localhost:5173
 ```
 
-The application will be available at `http://localhost:5173`
-
-### Build for Production
+### 📦 Build for Production
 
 ```bash
+# Build optimized bundle
 npm run build
-```
 
-The production build will be in the `dist/` folder.
+# Preview production build
+npm run preview
+
+# 📁 Output: dist/ folder (131KB gzipped)
+```
 
 ---
 

@@ -36,6 +36,30 @@
     <priority>0.9</priority>
   </url>
 
+  <!-- Blog Post: Come Validare JSON Online -->
+  <url>
+    <loc>https://thejord.it/blog/come-validare-json-online</loc>
+    <lastmod>2025-01-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Blog Post: Base64 Encoder Decoder Guida -->
+  <url>
+    <loc>https://thejord.it/blog/base64-encoder-decoder-guida</loc>
+    <lastmod>2025-01-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Blog Post: RegEx Tester Italiano Pattern -->
+  <url>
+    <loc>https://thejord.it/blog/regex-tester-italiano-pattern</loc>
+    <lastmod>2025-01-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
   <!-- Blog Post: Lancio THEJORD.IT -->
   <url>
     <loc>https://thejord.it/blog/lancio-thejord-it</loc>

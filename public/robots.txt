@@ -1,15 +1,49 @@
 # https://www.robotstxt.org/robotstxt.html
-# Allow all crawlers
+# THEJORD.IT - Developer Tools Suite
+# robots.txt
 
+# Host declaration (helps search engines understand canonical domain)
+Host: https://thejord.it
+
+# === GENERAL CRAWLERS ===
 User-agent: *
 Allow: /
+Crawl-delay: 1
 
-# Sitemap location
+# === GOOGLE BOT ===
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# === GOOGLE IMAGE BOT ===
+User-agent: Googlebot-Image
+Allow: /
+
+# === BING BOT ===
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# === YANDEX BOT ===
+User-agent: Yandex
+Allow: /
+Crawl-delay: 2
+
+# === BAD BOTS (block spam/scraping bots) ===
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+# === SITEMAPS ===
 Sitemap: https://thejord.it/sitemap.xml
 
-# Crawl delay (optional - be nice to server)
-# Crawl-delay: 1
-
-# Disallow specific paths (if needed)
-# Disallow: /admin/
-# Disallow: /private/
+# === DISALLOWED PATHS ===
+# Currently none - all public tools

@@ -3,6 +3,39 @@ import { Link } from 'react-router-dom'
 // Blog posts data (temporary - will move to database/CMS later)
 const blogPosts = [
   {
+    id: 'come-validare-json-online',
+    slug: 'come-validare-json-online',
+    title: 'Come Validare JSON Online Gratis: Guida Completa 2025',
+    excerpt: 'Scopri come validare JSON online in modo rapido e sicuro con il nostro JSON Formatter privacy-first. Guida completa con esempi, conversione formati e funzionalità avanzate.',
+    author: 'Team THEJORD',
+    date: '2025-01-13',
+    readTime: '8 min',
+    tags: ['Tutorial', 'JSON', 'Developer Tools'],
+    image: '📄'
+  },
+  {
+    id: 'base64-encoder-decoder-guida',
+    slug: 'base64-encoder-decoder-guida',
+    title: 'Base64 Encoder Online: Guida Completa con Rilevamento File',
+    excerpt: 'Codifica e decodifica testo e file in Base64 con rilevamento automatico di 50+ tipi di file. Supporto completo per immagini, PDF, archivi e molto altro.',
+    author: 'Team THEJORD',
+    date: '2025-01-13',
+    readTime: '7 min',
+    tags: ['Tutorial', 'Base64', 'Security'],
+    image: '🔐'
+  },
+  {
+    id: 'regex-tester-italiano-pattern',
+    slug: 'regex-tester-italiano-pattern',
+    title: 'RegEx Tester Italiano: 30+ Pattern Pronti all\'Uso',
+    excerpt: 'Testa espressioni regolari con 30+ pattern predefiniti: email, URL, codice fiscale, partita IVA, telefono italiano e molto altro. Testing in tempo reale.',
+    author: 'Team THEJORD',
+    date: '2025-01-13',
+    readTime: '6 min',
+    tags: ['Tutorial', 'RegEx', 'Developer Tools'],
+    image: '🔍'
+  },
+  {
     id: 'lancio-thejord-it',
     slug: 'lancio-thejord-it',
     title: 'Lancio di THEJORD.IT: Developer Tools Privacy-First Made in Italy',
