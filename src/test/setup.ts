@@ -25,10 +25,4 @@ Object.defineProperty(window, 'matchMedia', {
   })),
 })
 
-// Mock clipboard API
-Object.assign(navigator, {
-  clipboard: {
-    writeText: vi.fn(() => Promise.resolve()),
-    readText: vi.fn(() => Promise.resolve('')),
-  },
-})
+// Note: Clipboard API is automatically mocked by @testing-library/user-event
