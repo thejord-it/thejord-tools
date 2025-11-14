@@ -265,21 +265,35 @@ For detailed deployment instructions, see [DEPLOYMENT.md](./DEPLOYMENT.md).
 
 ---
 
-## 📊 Comparison with IT-Tools
+## 📊 Comparison with Competitors
 
-| Feature | THEJORD.IT | IT-Tools |
-|---------|------------|----------|
-| **Framework** | ⚛️ React | 🟢 Vue.js |
-| **Language** | 📘 TypeScript | 📘 TypeScript |
-| **Build Tool** | ⚡ Vite | ⚡ Vite |
-| **Tool Count** | 9 tools | 80+ tools |
-| **License** | MIT | GNU GPLv3 |
-| **Self-Hosting** | ✅ Docker, K3s | ✅ Docker |
-| **Client-Side** | ✅ 100% | ✅ 100% |
-| **Language** | 🇮🇹 Italian-first | 🇬🇧 English |
-| **Target** | Italian devs | Global |
+| Feature | THEJORD.IT | IT-Tools | ToolAska | CodeUtil | DevTills |
+|---------|------------|----------|----------|----------|----------|
+| **Framework** | ⚛️ React 18 | 🟢 Vue 3 | 🅰️ Angular | ⚛️ Next.js | 🅰️ Angular |
+| **Language** | 📘 TypeScript | 📘 TypeScript | 📘 TypeScript | 📘 TypeScript | 📘 TypeScript |
+| **Build Tool** | ⚡ Vite | ⚡ Vite | 🔨 Angular CLI | ⚡ Next.js | 🔨 Angular CLI |
+| **Tool Count** | 9 tools | 80+ tools | 9 categories | 19 tools | 15 tools |
+| **GitHub Stars** | - | ⭐ 34k | - | - | - |
+| **License** | ✅ MIT | ⚠️ GNU GPLv3 | ℹ️ Not specified | ℹ️ Not specified | ℹ️ Not specified |
+| **Self-Hosting** | ✅ Docker, K3s | ✅ Docker | ⚠️ Limited | ⚠️ Limited | ⚠️ Limited |
+| **CI/CD** | ✅ GitHub Actions | ⚠️ Varies | ❌ Not public | ❌ Not public | ❌ Not public |
+| **Client-Side** | ✅ 100% | ✅ 100% | ✅ 100% | ✅ 100% | ✅ 100% |
+| **Privacy** | ✅ Zero tracking | ✅ Open source | ⚠️ Firebase | ⚠️ Google Analytics | ℹ️ Privacy-friendly |
+| **Open Source** | ✅ Full | ✅ Full | ❌ Closed | ❌ Closed | ❌ Closed |
+| **Language** | 🇮🇹 Italian-first | 🇬🇧 English | 🇬🇧 English | 🇬🇧 English | 🇬🇧 English |
+| **Target Audience** | Italian devs | Global | Developers | Developers | Developers |
+| **Deployment Docs** | ✅ Complete | ✅ Community | ❌ No | ❌ No | ❌ No |
 
-**THEJORD.IT** is designed as a **lightweight, React-based alternative** to IT-Tools, with focus on the Italian developer community and essential tools.
+### Why Choose THEJORD.IT?
+
+**THEJORD.IT** is designed as a **lightweight, React-based alternative** with focus on:
+- 🇮🇹 **Italian developer community** - Italian-first interface and documentation
+- 🔓 **True open source** - MIT license (more permissive than GPLv3)
+- 🔒 **Privacy-first** - Zero tracking, no analytics, no Firebase/GA4
+- 📦 **Production-ready** - Complete CI/CD pipeline with K3s deployment
+- 📖 **Enterprise documentation** - Full deployment guides and troubleshooting
+- ⚡ **Modern stack** - React 18, TypeScript 5.2, Vite 4.5
+- 🎯 **Curated tools** - Essential utilities without feature bloat
 
 ---
 
