@@ -163,6 +163,8 @@ function App() {
         onAccept={() => {
           console.log('Cookie accettati')
           initGA()
+          // Track initial page view after initialization
+          setTimeout(() => trackPageView(window.location.pathname), 100)
         }}
         onDecline={() => {
           console.log('Cookie rifiutati')
