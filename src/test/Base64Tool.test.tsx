@@ -287,8 +287,8 @@ describe('Base64Tool', () => {
 
       // Error should be displayed (either in toast or error div)
       await waitFor(() => {
-        const errorText = screen.queryByText(/File too large/i) || screen.queryByText(/Max 5MB/i)
-        expect(errorText).toBeInTheDocument()
+        const errorTexts = screen.queryAllByText(/File too large/i)
+        expect(errorTexts.length).toBeGreaterThan(0)
       }, { timeout: 3000 })
     })
   })
