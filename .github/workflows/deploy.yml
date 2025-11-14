@@ -1,10 +1,7 @@
 name: Build and Deploy to K3s
 
 on:
-  push:
-    branches:
-      - main
-  workflow_dispatch:  # Allow manual trigger
+  workflow_dispatch:  # Manual trigger only to save resources
 
 env:
   REGISTRY: ghcr.io
