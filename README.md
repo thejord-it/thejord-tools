@@ -31,7 +31,7 @@
 
 </div>
 
-> **⚠️ Privacy-First Philosophy**: All tools run 100% in your browser. Zero data transmission. Zero tracking. Zero cookies.
+> **🇮🇹 Italian-First Developer Tools**: Built for the Italian developer community with enterprise-grade documentation and modern tech stack.
 
 <div align="center">
 
@@ -63,14 +63,14 @@
 
 | 🏆 Feature | THEJORD.IT | Other Tools |
 |:-----------|:----------:|:-----------:|
-| **Privacy-First** | ✅ 100% Client-Side | ❌ Server Upload |
-| **No Tracking** | ✅ Zero Analytics | ❌ Google Analytics |
-| **No Cookies** | ✅ None | ❌ Tracking Cookies |
-| **Offline Mode** | ✅ Works Offline | ❌ Requires Internet |
-| **Open Source** | ✅ MIT License | ⚠️ Varies |
+| **Italian-First** | ✅ IT Community | ❌ English Only |
+| **Open Source** | ✅ MIT License | ⚠️ GPLv3/Proprietary |
+| **CI/CD Pipeline** | ✅ Automated Deploy | ⚠️ Manual/Varies |
+| **Documentation** | ✅ Enterprise-Grade | ⚠️ Basic/None |
+| **Modern Stack** | ✅ React 18 + Vite | ⚠️ Vue/Angular/jQuery |
+| **Client-Side** | ✅ 100% Browser | ✅ Most Tools |
 | **File Support** | ✅ 50+ File Types | ⚠️ Limited |
-| **Modern UI** | ✅ React 18 + Tailwind | ⚠️ jQuery/Bootstrap |
-| **Italian First** | ✅ IT Community | ❌ English Only |
+| **Self-Hosting** | ✅ Docker + K3s | ⚠️ Docker Only |
 
 </div>
 
@@ -80,8 +80,8 @@
 
 <table>
   <tr>
-    <td align="center">🔒</td>
-    <td><b>Privacy-First</b><br/>All processing happens in your browser. Zero data sent to servers. <a href="#-security--privacy">Learn more →</a></td>
+    <td align="center">🇮🇹</td>
+    <td><b>Made in Italy</b><br/>The Italian alternative to IT-Tools with focus on IT community.</td>
   </tr>
   <tr>
     <td align="center">⚡</td>
@@ -93,11 +93,11 @@
   </tr>
   <tr>
     <td align="center">🌍</td>
-    <td><b>100% Client-Side</b><br/>Works offline after first load. No backend required.</td>
+    <td><b>100% Client-Side</b><br/>Works offline after first load. All tool processing in browser.</td>
   </tr>
   <tr>
-    <td align="center">🇮🇹</td>
-    <td><b>Made in Italy</b><br/>The Italian alternative to IT-Tools with focus on IT community.</td>
+    <td align="center">📊</td>
+    <td><b>Privacy-Conscious Analytics</b><br/>Google Analytics with IP anonymization. Transparent data usage. <a href="/privacy">Privacy Policy →</a></td>
   </tr>
   <tr>
     <td align="center">🔧</td>
@@ -278,7 +278,7 @@ For detailed deployment instructions, see [DEPLOYMENT.md](./DEPLOYMENT.md).
 | **Self-Hosting** | ✅ Docker, K3s | ✅ Docker | ⚠️ Limited | ⚠️ Limited | ⚠️ Limited |
 | **CI/CD** | ✅ GitHub Actions | ⚠️ Varies | ❌ Not public | ❌ Not public | ❌ Not public |
 | **Client-Side** | ✅ 100% | ✅ 100% | ✅ 100% | ✅ 100% | ✅ 100% |
-| **Privacy** | ✅ Zero tracking | ✅ Open source | ⚠️ Firebase | ⚠️ Google Analytics | ℹ️ Privacy-friendly |
+| **Privacy** | ✅ GA4 + transparent | ✅ Open source | ⚠️ Firebase | ✅ GA4 | ℹ️ Privacy-friendly |
 | **Open Source** | ✅ Full | ✅ Full | ❌ Closed | ❌ Closed | ❌ Closed |
 | **Language** | 🇮🇹 Italian-first | 🇬🇧 English | 🇬🇧 English | 🇬🇧 English | 🇬🇧 English |
 | **Target Audience** | Italian devs | Global | Developers | Developers | Developers |
@@ -289,7 +289,7 @@ For detailed deployment instructions, see [DEPLOYMENT.md](./DEPLOYMENT.md).
 **THEJORD.IT** is designed as a **lightweight, React-based alternative** with focus on:
 - 🇮🇹 **Italian developer community** - Italian-first interface and documentation
 - 🔓 **True open source** - MIT license (more permissive than GPLv3)
-- 🔒 **Privacy-first** - Zero tracking, no analytics, no Firebase/GA4
+- 📊 **Privacy-conscious** - Transparent analytics with IP anonymization and GDPR compliance
 - 📦 **Production-ready** - Complete CI/CD pipeline with K3s deployment
 - 📖 **Enterprise documentation** - Full deployment guides and troubleshooting
 - ⚡ **Modern stack** - React 18, TypeScript 5.2, Vite 4.5
@@ -299,12 +299,25 @@ For detailed deployment instructions, see [DEPLOYMENT.md](./DEPLOYMENT.md).
 
 ## 🔒 Security & Privacy
 
-### Privacy-First Architecture
-- ✅ **Zero telemetry** - No tracking, no analytics
-- ✅ **No cookies** - No tracking cookies
-- ✅ **Client-side only** - All processing in browser
-- ✅ **No data transmission** - Nothing sent to servers
-- ✅ **Open source** - Audit the code yourself
+### Privacy-Conscious Approach
+- ✅ **Transparent Analytics** - Google Analytics 4 with IP anonymization for site improvement
+- ✅ **Cookie Consent** - GDPR-compliant cookie banner with opt-out option
+- ✅ **Client-side Processing** - All tool data (JSON, Base64, etc.) stays in your browser
+- ✅ **No Data Sale** - We never sell or share your personal data with third parties
+- ✅ **Open Source** - Audit the code yourself on [GitHub](https://github.com/thejord-it/thejord-tools)
+- ✅ **Privacy Policy** - Full transparency on [Privacy Policy](/privacy) page
+
+### What We Track
+Google Analytics helps us understand:
+- Which tools are most popular (to prioritize development)
+- Geographic distribution (to decide which languages to support)
+- Device types and browsers (for compatibility testing)
+- Page load performance (to optimize speed)
+
+**What We DON'T Track:**
+- ❌ The actual content you process in tools (JSON, Base64, text, etc.)
+- ❌ Personal information without consent
+- ❌ Cross-site tracking or fingerprinting
 
 ### Security Headers
 - Content-Security-Policy (CSP)

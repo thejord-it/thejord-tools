@@ -1,4 +1,7 @@
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
+import { useEffect } from 'react'
+import { BrowserRouter, Routes, Route, Link, useLocation } from 'react-router-dom'
+import CookieConsent from 'react-cookie-consent'
+import { initGA, trackPageView } from './lib/analytics'
 import JsonFormatter from './pages/JsonFormatter'
 import Base64Tool from './pages/Base64Tool'
 import RegexTester from './pages/RegexTester'
@@ -13,6 +16,7 @@ import Contact from './pages/Contact'
 import Blog from './pages/Blog'
 import BlogPost from './pages/BlogPost'
 import Changelog from './pages/Changelog'
+import Privacy from './pages/Privacy'
 
 function Home() {
   return (
@@ -110,9 +114,27 @@ function Home() {
   )
 }
 
+// Analytics tracker component
+function AnalyticsTracker() {
+  const location = useLocation()
+
+  useEffect(() => {
+    // Track page view on route change
+    trackPageView(location.pathname + location.search)
+  }, [location])
+
+  return null
+}
+
 function App() {
+  useEffect(() => {
+    // Initialize Google Analytics on app mount
+    initGA()
+  }, [])
+
   return (
     <BrowserRouter>
+      <AnalyticsTracker />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/json-formatter" element={<JsonFormatter />} />
@@ -129,7 +151,50 @@ function App() {
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:slug" element={<BlogPost />} />
         <Route path="/changelog" element={<Changelog />} />
+        <Route path="/privacy" element={<Privacy />} />
       </Routes>
+
+      {/* Cookie Consent Banner */}
+      <CookieConsent
+        location="bottom"
+        buttonText="Accetta"
+        declineButtonText="Rifiuta"
+        enableDeclineButton
+        onAccept={() => {
+          console.log('Cookie accettati')
+          initGA()
+        }}
+        onDecline={() => {
+          console.log('Cookie rifiutati')
+        }}
+        style={{
+          background: '#1F2937',
+          borderTop: '1px solid #374151',
+        }}
+        buttonStyle={{
+          background: '#3B82F6',
+          color: '#ffffff',
+          fontSize: '14px',
+          borderRadius: '6px',
+          padding: '8px 16px',
+        }}
+        declineButtonStyle={{
+          background: '#374151',
+          color: '#ffffff',
+          fontSize: '14px',
+          borderRadius: '6px',
+          padding: '8px 16px',
+        }}
+        expires={365}
+      >
+        <span className="text-sm text-gray-300">
+          Questo sito utilizza Google Analytics per migliorare l'esperienza utente e analizzare il traffico.{' '}
+          <Link to="/privacy" className="text-primary-light hover:underline">
+            Leggi la Privacy Policy
+          </Link>
+          .
+        </span>
+      </CookieConsent>
     </BrowserRouter>
   )
 }
