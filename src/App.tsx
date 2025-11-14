@@ -127,9 +127,12 @@ function AnalyticsTracker() {
 }
 
 function App() {
+  // Check if user previously accepted cookies and init GA
   useEffect(() => {
-    // Initialize Google Analytics on app mount
-    initGA()
+    const cookieConsent = document.cookie.includes('CookieConsent=true')
+    if (cookieConsent) {
+      initGA()
+    }
   }, [])
 
   return (
